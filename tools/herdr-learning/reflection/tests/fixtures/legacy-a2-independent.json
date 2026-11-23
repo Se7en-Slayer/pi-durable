@@ -1,0 +1,17 @@
+{
+  "goal": "A2 backend cycle (sanitized compatibility shape; synthetic values)",
+  "state": "complete",
+  "verification_policy": "independent-candidate",
+  "supervisor": {"address": "t1", "created_ms": 1000},
+  "workers": [{"address": "t2", "created_ms": 2000}, {"address": "t3", "created_ms": 3000}],
+  "reviewer": "fixture-checker",
+  "candidate": {"sha": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "checkout": "@checkout", "makers": ["fixture-maker"]},
+  "required_checks": ["focused", "disposable-db"],
+  "verification_receipt": "@receipt",
+  "closeout_evidence": "@closeout",
+  "deliverables": [
+    {"id": "A2-RC-01", "name": "Existing implementation", "objective": "Retain existing completed work", "state": "complete", "status": "integrated", "owner": "fixture-maker", "dependencies": [], "evidence": ["@implementation"], "priority": 1, "verification": "exact pin", "risk": "fixture", "decision": {"level": 1}, "kind": "known"},
+    {"id": "A2-RC-03", "name": "Disposable verification", "objective": "Retain exact emitted evidence", "state": "complete", "status": "verified", "owner": "fixture-checker", "dependencies": ["A2-RC-01"], "evidence": ["@db"], "priority": 2, "verification": "named suites", "risk": "fixture", "decision": {"level": 1}, "kind": "known"},
+    {"id": "A2-HELD", "name": "Held work", "objective": "Keep restricted work out of the run", "state": "deferred", "status": "deferred", "owner": "fixture-maker", "dependencies": [], "evidence": [], "priority": 3, "verification": "not applicable", "risk": "fixture", "decision": {"level": 3}, "kind": "known", "reason": "out of this fixture's authority"}
+  ]
+}

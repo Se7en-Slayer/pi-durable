@@ -1,0 +1,10 @@
+{
+  "goal": "Legacy goal completed by a report (synthetic)",
+  "state": "complete",
+  "supervisor": {"address": "t1", "created_ms": 1000},
+  "closeout_evidence": "@closeout",
+  "deliverables": [
+    {"name": "Historical deliverable", "state": "complete", "evidence": ["@report"]},
+    {"name": "Historical deferred item", "state": "deferred", "reason": "retained disposition"}
+  ]
+}
